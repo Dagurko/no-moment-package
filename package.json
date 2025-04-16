@@ -1,5 +1,5 @@
 {
-  "name": "@Dagurko/no-moment",
+  "name": "@dagurko/no-moment",
   "version": "1.0.1",
   "main": "no-moment.js",
   "scripts": {
