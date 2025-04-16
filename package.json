@@ -1,11 +1,20 @@
 {
-  "name": "eslint-plugin-no-moment",
+  "name": "@Dagurko/no-moment",
   "version": "1.0.0",
   "main": "index.js",
-  "keywords": ["eslint", "eslintplugin"],
-  "peerDependencies": {
-    "eslint": "^8.0.0"
+  "description": "An ESLint plugin to ban moment.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dagurko/no-moment-package"
   },
-  "license": "MIT",
-  "author": "Dagur Kari Ólafsson"
-}
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "test": "vitest"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^9.24.0",
+    "vitest": "^3.1.1"
+  }
