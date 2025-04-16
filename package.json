@@ -1,16 +1,11 @@
 {
-  "name": "no-moment",
+  "name": "eslint-plugin-no-moment",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "keywords": ["eslint", "eslintplugin"],
+  "peerDependencies": {
+    "eslint": "^8.0.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "eslint": "^9.24.0",
-    "vitest": "^3.1.1"
-  }
+  "license": "MIT",
+  "author": "Dagur Kari Ólafsson"
 }

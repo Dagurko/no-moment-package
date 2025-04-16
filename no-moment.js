@@ -1,35 +1,29 @@
 module.exports = {
-    meta: {
-      type: "problem",
-      docs: {
-        description: "disallow usage of moment",
-        category: "Best Practices",
-      },
-      messages: {
-        noMoment: "Using 'moment' is not allowed. Please use date-fns or another alternative.",
-      },
-    },
-    create(context) {
-      return {
-        ImportDeclaration(node) {
-          if (node.source.value === "moment") {
-            context.report({
-              node,
-              messageId: "noMoment",
-            });
-          }
+  rules: {
+    "no-moment": {
+      meta: {
+        type: "problem",
+        docs: {
+          description: "Disallow importing moment.js",
+          category: "Best Practices",
+          recommended: false
         },
-        CallExpression(node) {
-          if (
-            node.callee.name === "require" &&
-            node.arguments[0]?.value === "moment"
-          ) {
-            context.report({
-              node,
-              messageId: "noMoment",
-            });
+        messages: {
+          avoidMoment: "Using 'moment' is not allowed."
+        }
+      },
+      create(context) {
+        return {
+          ImportDeclaration(node) {
+            if (node.source.value === "moment") {
+              context.report({
+                node,
+                messageId: "avoidMoment"
+              });
+            }
           }
-        },
-      };
-    },
-  };
+        };
+      }
+    }
+  }
+};
