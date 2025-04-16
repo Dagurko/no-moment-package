@@ -1,6 +1,6 @@
 {
   "name": "@Dagurko/no-moment",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "no-moment.js",
   "scripts": {
     "test": "vitest"
